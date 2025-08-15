@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "Error: You must specify a directory path"
+    echo "Example: backup /etc config-files"
+    exit 1
+fi
+
+if [ -z "$2" ]; then
+    echo "Error: You must specify the backup name"
+    echo "Example: backup /etc config-files"
+    exit 1
+fi
+
+CURRENT_DATE=$(now) 
+
+OUTPUT_FILE=$2-$CURRENT_DATE
+
+compress $1 $OUTPUT_FILE

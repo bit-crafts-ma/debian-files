@@ -1,0 +1,25 @@
+ #!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "Error: You must specify an archive file as first argument"
+    echo "Example: extract archive.bzip2 /tmp"
+    exit 1
+fi
+if [ -z "$2" ]; then
+    echo "Error: You must specify a directory path as second argument"
+    echo "Example: extract archive.bzip2 /tmp"
+    exit 1
+fi
+
+if [ ! -d "$2" ]; then
+  mkdir -p $2
+fi
+
+MKDIR_EXIT_STATUS=$?
+
+if [ $MKDIR_EXIT_STATUS -eq 0 ]; then
+    tar -I pbzip2 -xf $1 -C $2
+else
+    echo "Error creating $2 directory"
+fi
+

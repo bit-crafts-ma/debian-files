@@ -1,0 +1,8 @@
+alias ls='ls -alhsp --group-directories-first --color=auto'
+alias grep='grep --color=auto'
+alias mkdir='mkdir -pv'
+alias cp='cp -v'
+alias rm='rm -v'
+alias mv='mv -v'
+alias df='df -h'
+alias du='du -h'

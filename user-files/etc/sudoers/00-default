@@ -1,0 +1,2 @@
+%sudo ALL=(ALL) NOPASSWD:/usr/bin/apt, /usr/bin/systemctl, /usr/bin/journalctl
+%sudo ALL=(ALL) NOPASSWD:/usr/bin/apt, /usr/bin/systemctl, /usr/bin/journalctl

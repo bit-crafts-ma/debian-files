@@ -1,0 +1,14 @@
+ #!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "Error: You must specify a directory or filename"
+    echo "Example: compress /etc/apt apt-backup"
+    exit 1
+fi
+if [ -z "$2" ]; then
+    echo "Error: You must specify a directory or filename"
+    echo "Example: compress /etc/apt apt-backup"
+    exit 1
+fi
+
+tar -I pbzip2 -cf $2.bz2 $1

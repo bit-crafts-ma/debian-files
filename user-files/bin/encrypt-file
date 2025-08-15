@@ -1,0 +1,15 @@
+ #!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "Error: You must specify a  an email address"
+    echo "Example: encrypt-file test@example.com apt-backup.bzip2"
+    exit 1
+fi
+
+if [ -z "$2" ]; then
+    echo "Error: You must specify a file to encrypt"
+    echo "Example: encrypt-file test@example.com apt-backup.bzip2"
+    exit 1
+fi
+
+gpg --encrypt --armor --sign  --recipient  $1 $2
