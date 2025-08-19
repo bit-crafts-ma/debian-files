@@ -13,4 +13,4 @@ sudo apt install -y --no-install-recommends \
   clang clangd clang-tidy clang-tools clang-format \
   build-essential make meson ninja-build bison gnupg  \
   pkg-config cmake pbzip2 mdadm texinfo ufw fail2ban unzip \
-  nfs_common systemd-resolved system-timesyncd
+  nfs-common systemd-resolved systemd-timesyncd
